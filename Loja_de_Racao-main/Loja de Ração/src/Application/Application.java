@@ -4,7 +4,6 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.util.Locale;
 import java.util.Scanner;
 
 import Entities.Cadastro;
@@ -17,8 +16,7 @@ public class Application {
         Scanner sc = new Scanner(System.in); //scanner para Cadastro
         Scanner fr = new Scanner(System.in); //scanner para Fileread
 
-        Cadastro usuariocadastrado = null;
-        Cadastro novocadastro = null;
+        Cadastro Cliente = null;
 
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(Path, true))) {
             fr = new Scanner(file);
@@ -33,15 +31,13 @@ public class Application {
                 String nome = sc.next().toLowerCase();
                 while (fr.hasNextLine()) {
                     object = fr.nextLine().split(";");
-                    if (object[0].toLowerCase(Locale.ROOT) == nome) {
+                    if (object[0] == nome) {
+                        System.out.println(object[0]);
                         System.out.println("Localizei seu cadastro!");
-                    } else {
-                        throw new NullPointerException("Cadastro não localizado, tente novamente;");
                     }
                     System.out.println("Qual o peso atual do seu Pet?");
                     double novopeso = sc.nextDouble();
-                    usuariocadastrado = new Cadastro(object[0], object[1], object[2], novopeso);
-                    System.out.println("Então " + usuariocadastrado.getNome() + " deseja comprar ração para " + usuariocadastrado.getNomepet() + "?");
+                    Cliente = new Cadastro(object[0], object[1], object[2], novopeso);
                 }
             } else if (resposta == 'n') {
                 System.out.println("Qual o seu nome é?");
@@ -52,25 +48,29 @@ public class Application {
                 String TipoDePet = sc.next().toLowerCase();
                 System.out.println("Qual o peso do seu pet?");
                 double PesoDoPet = sc.nextDouble();
-                novocadastro = new Cadastro(nome, nomepet, TipoDePet, PesoDoPet);
+                Cliente = new Cadastro(nome, nomepet, TipoDePet, PesoDoPet);
                 while (!fr.hasNextLine()) {
-                    bw.write(novocadastro.toString());
+                    bw.write(Cliente.toString());
                     System.out.println("Cadastro Adicionado!");
                     break;
                 }
-                System.out.println("Então " + novocadastro.getNome() + " deseja comprar ração para " + novocadastro.getNomepet() + "?");
-
             } else {
                 System.out.println("Operação invalida");
                 throw new RuntimeException();
             }
 
-System.out.println(novocadastro.toString());
-System.out.println(usuariocadastrado.toString());
+            System.out.println("Então " + Cliente.getNome() + " deseja comprar ração para " + Cliente.getNomepet() + "?");
+            System.out.println(Cliente.toString());
+
+
 
 
         } catch (IOException e) {
             System.out.println("Arquivo não encontrado ou não pode ser lido!");
+
+        } catch (NullPointerException e) {
+            System.out.println("Usuario não encontrado!");
+
         } finally {
 
             if (sc != null) {
