@@ -5,7 +5,7 @@ public class Cadastro {
 	private String nomepet;
 	private String TipoDePet; 
 	private double PesoDoPet;
-	
+
 	public Cadastro(String nome, String nomepet, String tipoDePet, double pesoDoPet) {
 		this.nome = nome;
 		this.nomepet = nomepet;
