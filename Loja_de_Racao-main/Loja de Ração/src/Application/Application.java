@@ -45,9 +45,9 @@ public class Application {
                 }
             } else if (resposta == 'n') {
                 System.out.println("Qual o seu nome é?");
-                String nome = sc.next();
+                String nome = sc.next().toLowerCase();
                 System.out.println("Qual o nome do seu pet?");
-                String nomepet = sc.next();
+                String nomepet = sc.next().toLowerCase();
                 System.out.println("O seu pet é um gato, cachorro ou passaro?");
                 String TipoDePet = sc.next().toLowerCase();
                 System.out.println("Qual o peso do seu pet?");
