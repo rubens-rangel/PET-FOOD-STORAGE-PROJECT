@@ -16,8 +16,7 @@ public class Application {
 
         Scanner sc = new Scanner(System.in); //scanner para Cadastro
         Scanner fr = new Scanner(System.in); //scanner para Fileread
-        //	Cadastro usuariocadastrado = null;
-        //	Cadastro novocadastro = null;
+
         Cadastro usuariocadastrado = null;
         Cadastro novocadastro = null;
 
