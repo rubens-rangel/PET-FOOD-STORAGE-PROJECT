@@ -1,16 +1,16 @@
 package Entities;
 
-public class Cadastro {
+public class Cliente {
 	private String nome;
 	private String nomepet;
-	private String TipoDePet; 
-	private double PesoDoPet;
+	private String TipoDePet;
+	private double PesoPet;
 
-	public Cadastro(String nome, String nomepet, String tipoDePet, double pesoDoPet) {
+	public Cliente(String nome, String nomepet, String tipoDePet, double pesoPet) {
 		this.nome = nome;
 		this.nomepet = nomepet;
 		TipoDePet = tipoDePet;
-		PesoDoPet = pesoDoPet;
+		PesoPet = pesoPet;
 	}
 	public String getNome() {
 		return nome;
@@ -30,16 +30,16 @@ public class Cadastro {
 	public void setTipoDePet(String tipoDePet) {
 		TipoDePet = tipoDePet;
 	}
-	public double getPesoDoPet() {
-		return PesoDoPet;
+	public double getPesoPet() {
+		return PesoPet;
 	}
-	public void setPesoDoPet(double pesoDoPet) {
-		PesoDoPet = pesoDoPet;
+	public void setPesoPet(double pesoPet) {
+		PesoPet = pesoPet;
 	}
 
 	@Override
 	public String toString() {
-		return nome + ";" + nomepet + ";" + TipoDePet + ";" + PesoDoPet;
+		return nome + ";" + nomepet + ";" + TipoDePet + ";" + PesoPet;
 			
 	}
 	
