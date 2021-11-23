@@ -24,6 +24,9 @@ public class TipoDeAnimal {
     public void setPesoPet(double pesoPet) {
         PesoPet = pesoPet;
     }
+
+
+
     public Double PesoRacao(double PesoPet) {
         return 0.0;
     }

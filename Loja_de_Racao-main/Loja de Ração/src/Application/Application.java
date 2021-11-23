@@ -55,9 +55,11 @@ public class Application {
                 double PesoPet = sc.nextDouble();
                 cliente = new Cliente(nome, nomepet, TipoDePet, PesoPet);
 
-                while (!fr.hasNextLine()) {
+                while (fr.hasNextLine()) {
+                    fr.next();
                     bw.write(cliente.toString());
                     System.out.println("Cadastro Adicionado!");
+                    break;
                 }
 
             } else {
