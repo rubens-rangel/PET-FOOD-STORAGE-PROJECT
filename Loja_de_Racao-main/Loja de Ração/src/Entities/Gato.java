@@ -17,7 +17,7 @@ public class Gato extends TipoDeAnimal {
             PrecoKg = 14.0;
             return PrecoKg;
         }
-        if (PesoPet >= 5 && PesoPet <  12) {
+        if (PesoPet >= 4 && PesoPet <  12) {
             PrecoKg = 18.0;
             return PrecoKg;
         } else {

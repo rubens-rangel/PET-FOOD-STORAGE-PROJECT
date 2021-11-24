@@ -56,7 +56,7 @@ public class Application {
                 cliente = new Cliente(nome, nomepet, TipoDePet, PesoPet);
 
                 while (fr.hasNextLine()) {
-                    fr.next();
+                    bw.write("\r");
                     bw.write(cliente.toString());
                     System.out.println("Cadastro Adicionado!");
                     break;
