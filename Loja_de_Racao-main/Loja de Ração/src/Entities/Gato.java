@@ -30,5 +30,4 @@ public class Gato extends TipoDeAnimal {
         double Precofinal = QuantidadeAComprar * PrecoKg;
         return Precofinal;
     }
-
 }

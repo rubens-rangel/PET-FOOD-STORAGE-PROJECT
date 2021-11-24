@@ -28,13 +28,10 @@ public class Passaro extends TipoDeAnimal {
         if (PesoPet >= 5 && PesoPet <  30) {
             PrecoKg = 7.0;
             return PrecoKg;
-        }
-
-        else {
+        }  else {
             return 0.0;
         }
     }
-
     @Override
     public Double CalculoPreco(double QuantidadeAComprar, double PrecoKg) {
         double Precofinal = QuantidadeAComprar * PrecoKg;

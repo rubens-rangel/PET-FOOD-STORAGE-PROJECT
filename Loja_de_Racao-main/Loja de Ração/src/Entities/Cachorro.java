@@ -1,7 +1,6 @@
 package Entities;
 
 public class Cachorro extends TipoDeAnimal {
-
     public Cachorro(String nomepet, double pesoDoPet) {
         super(nomepet, pesoDoPet);
     }
@@ -24,7 +23,6 @@ public class Cachorro extends TipoDeAnimal {
         if (PesoPet >= 47 && PesoPet < 110) {
             PrecoKg = 18.0;
             return PrecoKg;
-
         } else {
             return 0.0;
         }
@@ -35,5 +33,4 @@ public class Cachorro extends TipoDeAnimal {
         double Precofinal = QuantidadeAComprar * PrecoKg;
         return Precofinal;
     }
-
 }
